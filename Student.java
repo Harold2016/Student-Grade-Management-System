@@ -15,7 +15,7 @@ public class Student {
         if (grade < 0 || grade > 100) {
             throw new IllegalArgumentException("Grade must be between 0 and 100.");
         }
-    grades.add(grade);
+        grades.add(grade);
     }
 
     public double calculateAverage() {
