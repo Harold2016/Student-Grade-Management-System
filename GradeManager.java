@@ -13,6 +13,14 @@ public class GradeManager {
     public void addStudent(Student student) {
         students.add(student);
     }
+    public void loadFromFile(String filename) throws IOException {
+        Scanner scanner = new Scanner(new File(filename));
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            System.out.println("Loaded: " + line);
+        }
+        scanner.close();
+    }
     public boolean removeStudent(String id) {
         Student s = findStudent(id);
         if (s != null) {
