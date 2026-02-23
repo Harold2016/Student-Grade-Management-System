@@ -13,7 +13,14 @@ public class GradeManager {
     public void addStudent(Student student) {
         students.add(student);
     }
-
+    public boolean removeStudent(String id) {
+        Student s = findStudent(id);
+        if (s != null) {
+            students.remove(s);
+            return true;
+        }
+        return false;
+    }
     public Student findStudent(String id) {
         for (Student s : students) {
             if (s.getStudentId().equals(id)) {
